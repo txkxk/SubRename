@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SubRename"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="字幕重命名工具" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="选择视频" HorizontalAlignment="Left" Margin="122,10,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" RenderTransformOrigin="0.087,0.421"/>
+        <Button Content="选择字幕" HorizontalAlignment="Left" Margin="592,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="275" Margin="10,123,0,0" VerticalAlignment="Top" Width="254">
+        </ScrollViewer>
+        <ListView x:Name="movieListView" HorizontalAlignment="Left" Height="358" Margin="10,51,0,0" VerticalAlignment="Top" Width="329" SelectionChanged="MovieListView_SelectionChanged">
+        </ListView>
+        <ListView x:Name="subListView" HorizontalAlignment="Left" Height="358" Margin="453,51,0,0" VerticalAlignment="Top" Width="329">
+        </ListView>
+        <Button Content="执行重命名" HorizontalAlignment="Left" Margin="352,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
     </Grid>
 </Window>
