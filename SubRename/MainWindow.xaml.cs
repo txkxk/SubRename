@@ -45,12 +45,15 @@ namespace SubRename
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             movieList = GetFiles();
-            for (int i = 0; i < movieList.Length; i++)
+            if(movieList!=null)
             {
-                TextBlock t = new TextBlock();
-                FileInfo file = new FileInfo(movieList[i]);
-                t.Text = file.Name;
-                movieListView.Items.Add(t);
+                for (int i = 0; i < movieList.Length; i++)
+                {
+                    TextBlock t = new TextBlock();
+                    FileInfo file = new FileInfo(movieList[i]);
+                    t.Text = file.Name;
+                    movieListView.Items.Add(t);
+                }
             }
         }
 
@@ -62,12 +65,15 @@ namespace SubRename
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             subList = GetFiles();
-            for (int i = 0; i < subList.Length; i++)
+            if (subList != null)
             {
-                TextBlock t = new TextBlock();
-                FileInfo file = new FileInfo(subList[i]);
-                t.Text = file.Name;
-                subListView.Items.Add(t);
+                for (int i = 0; i < subList.Length; i++)
+                {
+                    TextBlock t = new TextBlock();
+                    FileInfo file = new FileInfo(subList[i]);
+                    t.Text = file.Name;
+                    subListView.Items.Add(t);
+                }
             }
         }
 
